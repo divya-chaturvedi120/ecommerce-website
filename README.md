@@ -33,11 +33,17 @@ This project demonstrates your ability to build a frontend-focused web applicati
 **Home Page**
 ![Home Page](Images/home.png)
 
+
 **Shop Page**
 ![Shop Page](Images/shop.png)
 
+**Blog Page**
+![Blog Page](Images/blog.png)
+
+
 **About Page**
 ![About Page](Images/about.png)
+
 
 **Contact Page**
 ![Contact Page](Images/contact.png)
