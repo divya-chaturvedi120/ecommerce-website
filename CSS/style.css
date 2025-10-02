@@ -1,26 +1,17 @@
-/* 🧱 Reset default styles */
+/* ===================== Reset & Base Styles ===================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-.top-offer-bar {
-  background-color: #000;
-  color: #fff;
-  text-align: center;
-  padding: 10px 20px;
-  font-size: 14px;
-  line-height: 1.5;
-  font-weight: 500;
-}
-/* 🅰️ Base styles */
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: #fff;
   color: #333;
 }
 
-/* 📢 Top header offer banner */
+/* ===================== Top Offer Bar ===================== */
 .top-offer-bar {
   background-color: black;
   color: white;
@@ -29,7 +20,7 @@ body {
   font-size: 14px;
 }
 
-/* 🔗 Main navigation bar */
+/* ===================== Navigation Bar ===================== */
 .nav-bar {
   display: flex;
   align-items: center;
@@ -39,7 +30,6 @@ body {
   flex-wrap: wrap;
 }
 
-/* 🏷️ Logo styles */
 .logo a {
   text-decoration: none;
   font-size: 24px;
@@ -47,10 +37,8 @@ body {
   color: #000;
 }
 
-/* 📁 Navigation links */
 .nav-links {
   display: flex;
-  justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
 }
@@ -62,34 +50,40 @@ body {
   transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active {
   color: #ff4c60;
 }
 
-/* 🔍 Search bar */
-.search-bar {
-  width: 200px;
-}
-
-.search-bar input {
+/* ===================== Hero Images ===================== */
+.hero-image img,
+.contact-hero {
   width: 100%;
-  padding: 6px 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-/* 🌄 Hero Image */
-.hero-image img {
-  width: 100%;
-  height: 100vh;
+  height: 60vh;
   object-fit: cover;
 }
 
-/* 🧰 Services Section */
+.contact-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+.contact-hero .hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.contact-hero .hero-text p {
+  font-size: 1.2rem;
+}
+
+/* ===================== Services Section ===================== */
 .services-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
   gap: 20px;
   padding: 40px 80px;
@@ -101,8 +95,8 @@ body {
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
   text-align: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
 }
 
@@ -119,7 +113,6 @@ body {
 .service-card h4 {
   font-size: 18px;
   margin-bottom: 8px;
-  color: #333;
 }
 
 .service-card p {
@@ -128,7 +121,441 @@ body {
   line-height: 1.5;
 }
 
-/* 📱 Responsive Layout */
+/* ===================== Products Section ===================== */
+.products-section {
+  padding: 60px 80px;
+  background-color: #fafafa;
+}
+
+.category-filters {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.category-filters a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  border: 1px solid #333;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.category-filters a:hover {
+  background-color: #ff4c60;
+  color: #fff;
+  border-color: #ff4c60;
+}
+
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.product-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease;
+}
+
+.product-card img:hover {
+  transform: scale(1.05);
+}
+
+.product-card h4 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.product-card .price {
+  font-size: 16px;
+  color: #ff4c60;
+}
+
+/* ===================== Featured Products ===================== */
+.featured-products-section {
+  padding: 60px 80px;
+  text-align: center;
+}
+
+.featured-header h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.featured-header p {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 40px;
+}
+
+/* ===================== Blog Page ===================== */
+.blog-page {
+  padding: 60px 8%;
+  background: #f9f9f9;
+}
+
+.blog-page .page-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #222;
+}
+
+.blog-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+}
+
+.blog-content .blog-post {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-content .blog-post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.blog-post img {
+  width: 100%;
+  display: block;
+}
+
+.blog-post h3 {
+  font-size: 1.5rem;
+  margin: 15px 20px 10px;
+}
+
+.blog-post p {
+  font-size: 1rem;
+  color: #555;
+  margin: 0 20px 20px;
+  line-height: 1.6;
+}
+
+.read-more {
+  display: inline-block;
+  margin: 0 20px 20px;
+  color: #e63946;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.read-more:hover {
+  color: #111;
+}
+
+.blog-sidebar {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.sidebar-widget {
+  margin-bottom: 30px;
+}
+
+.sidebar-widget h4 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #111;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 5px;
+}
+
+.sidebar-widget ul {
+  list-style: none;
+}
+
+.sidebar-widget ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar-widget ul li a {
+  color: #555;
+  text-decoration: none;
+}
+
+.sidebar-widget ul li a:hover {
+  color: #e63946;
+}
+
+.newsletter p {
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.newsletter input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.newsletter button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #e63946;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.newsletter button:hover {
+  background: #c72533;
+}
+
+/* ===================== About Section ===================== */
+.about-section {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  margin-bottom: 15px;
+  color: #555;
+  font-size: 1.1rem;
+}
+
+/* ===================== Mission & Values ===================== */
+.mission-values {
+  padding: 60px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.mv-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.mv-box {
+  flex: 1 1 300px;
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.mv-box:hover {
+  transform: translateY(-8px);
+}
+
+.mv-box i {
+  font-size: 2.5rem;
+  color: #ff6f61;
+  margin-bottom: 15px;
+}
+
+.mv-box h3 {
+  margin-bottom: 10px;
+}
+
+/* ===================== Team Section ===================== */
+.team-section {
+  padding: 60px 20px;
+  text-align: center;
+  background: #f3f3f3;
+}
+
+.team-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.team-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 250px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+}
+
+.team-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.team-card h4 {
+  margin: 15px 0 5px;
+  font-size: 1.2rem;
+}
+
+.team-card p {
+  margin-bottom: 15px;
+  color: #666;
+}
+
+/* ===================== Contact Section ===================== */
+.contact-section {
+  padding: 60px 20px;
+  background: #f3f3f3;
+  text-align: center;
+}
+
+.contact-container {
+  max-width: 600px;
+  margin: auto;
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+  margin-bottom: 25px;
+  font-size: 2rem;
+}
+
+.contact-form label {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background: #ff6f61;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #e05550;
+}
+
+/* ===================== Footer ===================== */
+.main-footer {
+  background: #111;
+  color: #fff;
+  padding: 40px 20px 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.footer-col h3,
+.footer-col h4 {
+  margin-bottom: 15px;
+  color: #ff6f61;
+}
+
+.footer-col p {
+  color: #ccc;
+  line-height: 1.5;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: #ccc;
+}
+
+.footer-col ul li a:hover {
+  color: #ff6f61;
+}
+
+.social-links a {
+  margin-right: 15px;
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.social-links a:hover {
+  color: #ff6f61;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  text-align: center;
+  border-top: 1px solid #444;
+  padding-top: 15px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* ===================== Responsive ===================== */
+@media (max-width: 992px) {
+  .blog-container {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 768px) {
   .nav-bar {
     flex-direction: column;
@@ -145,138 +572,26 @@ body {
     width: 100%;
   }
 
-  .services-container {
-    flex-direction: column;
-    padding: 20px;
-  }
-
-  .service-card {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .hero-image img {
-    height: 60vh;
-  }
-}
-/* 🧥 Products Section */
-.products-section {
-  padding: 60px 80px;
-  background-color: #fafafa;
-}
-
-.products-container {
-  display: flex;
-  gap: 40px;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.product-category {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  flex: 1 1 300px;
-  text-align: center;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
-}
-
-.product-category:hover {
-  transform: translateY(-5px);
-}
-
-.product-category img {
-  width: 100%;
-  max-height: 200px;
-  object-fit: contain;
-  margin-bottom: 15px;
-}
-
-.product-category h4 {
-  font-size: 20px;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-.product-category p {
-  font-size: 14px;
-  color: #777;
-  margin-bottom: 15px;
-}
-
-.category-links {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.category-links a {
-  color: #444;
-  text-decoration: none;
-  font-size: 14px;
-  transition: color 0.3s ease;
-}
-
-.category-links a:hover {
-  color: #ff4c60;
-}
-
-/* 📱 Responsive */
-@media (max-width: 768px) {
-  .products-container {
-    flex-direction: column;
-    gap: 30px;
-  }
-}
-/* 🛍️ Featured Products Section */
-.featured-products-section {
-  padding: 60px 80px;
-  background-color: #fafafa;
-  text-align: center;
-}
-
-.featured-header h3 {
-  font-size: 28px;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.featured-header p {
-  font-size: 14px;
-  color: #777;
-  margin-bottom: 40px;
-}
-
-.featured-products {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.product-image {
-  flex: 1 1 250px;
-  max-width: 300px;
-}
-
-.product-image img {
-  width: 100%;
-  height: 300px; /* Set fixed height */
-  object-fit: cover; /* Crop image to fill space */
-  border-radius: 12px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
-}
-
-.product-image img:hover {
-  transform: scale(1.05);
-}
-
-/* 📱 Responsive */
-@media (max-width: 768px) {
-  .featured-products {
+  .services-container,
+  .mv-container,
+  .team-container,
+  .footer-container,
+  .info-container {
     flex-direction: column;
     align-items: center;
+  }
+
+  .product-card img {
+    height: 200px;
+  }
+
+  .products-section,
+  .featured-products-section {
+    padding: 40px 20px;
+  }
+
+  .contact-container,
+  .team-card {
+    width: 90%;
   }
 }
